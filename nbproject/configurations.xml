@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>AbstractAppState.h</itemPath>
+      <itemPath>ActiveGameState.h</itemPath>
+      <itemPath>Button.h</itemPath>
+      <itemPath>Checkbox.h</itemPath>
+      <itemPath>ClientListener.h</itemPath>
+      <itemPath>ClientMain.h</itemPath>
+      <itemPath>DefConfigs.h</itemPath>
+      <itemPath>ExitButton.h</itemPath>
+      <itemPath>GameManager.h</itemPath>
+      <itemPath>GuiAppState.h</itemPath>
+      <itemPath>GuiRect.h</itemPath>
+      <itemPath>GuiText.h</itemPath>
+      <itemPath>InGameAppState.h</itemPath>
+      <itemPath>InputManager.h</itemPath>
+      <itemPath>Key.h</itemPath>
+      <itemPath>Listbox.h</itemPath>
+      <itemPath>OptionsButton.h</itemPath>
+      <itemPath>Player.h</itemPath>
+      <itemPath>Projectile.h</itemPath>
+      <itemPath>ServerListener.h</itemPath>
+      <itemPath>ServerMain.h</itemPath>
+      <itemPath>Slider.h</itemPath>
+      <itemPath>StateManager.h</itemPath>
+      <itemPath>Textbox.h</itemPath>
+      <itemPath>Util.h</itemPath>
+      <itemPath>Weapon.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>AbstractAppState.cpp</itemPath>
+      <itemPath>Button.cpp</itemPath>
+      <itemPath>Checkbox.cpp</itemPath>
+      <itemPath>ClientListencer.cpp</itemPath>
+      <itemPath>ClientMain.cpp</itemPath>
+      <itemPath>ExitButton.cpp</itemPath>
+      <itemPath>GameManager.cpp</itemPath>
+      <itemPath>GuiAppState.cpp</itemPath>
+      <itemPath>GuiRect.cpp</itemPath>
+      <itemPath>GuiText.cpp</itemPath>
+      <itemPath>InputManager.cpp</itemPath>
+      <itemPath>Key.cpp</itemPath>
+      <itemPath>Listbox.cpp</itemPath>
+      <itemPath>OptionsButton.cpp</itemPath>
+      <itemPath>Player.cpp</itemPath>
+      <itemPath>ServerMain.cpp</itemPath>
+      <itemPath>Slider.cpp</itemPath>
+      <itemPath>StateManager.cpp</itemPath>
+      <itemPath>Textbox.cpp</itemPath>
+      <itemPath>Util.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Juden1-6-master-Makefile.mk</itemPath>
+    </logicalFolder>
+    <itemPath>ogre.cfg</itemPath>
+    <itemPath>plugins.cfg</itemPath>
+    <itemPath>resources.cfg</itemPath>
+  </logicalFolder>
+  <projectmakefile>Juden1-6-master-Makefile.mk</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/OIS</pElem>
+            <pElem>/usr/include/SFML</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/OGRE</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerDepDynSerchKind>3</linkerDepDynSerchKind>
+          <linkerLibItems>
+            <linkerLibFileItem>/usr/lib/libOgreMain.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libboost_system.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOpenGL.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libsfml-audio.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libsfml-network.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libSDL.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOIS.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOgreOverlay.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractAppState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AbstractAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ActiveGameState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Checkbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Checkbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClientListencer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ClientListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClientMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ClientMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DefConfigs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExitButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExitButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiAppState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiRect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiRect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiText.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiText.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InGameAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InputManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Key.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Key.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Listbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Listbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptionsButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OptionsButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Projectile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServerListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServerMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServerMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Slider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Slider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StateManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StateManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Textbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Textbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Util.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Weapon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ogre.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="plugins.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/OIS</pElem>
+            <pElem>/usr/include/SFML</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/OGRE</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerDepDynSerchKind>3</linkerDepDynSerchKind>
+          <linkerLibItems>
+            <linkerLibFileItem>/usr/lib/libOgreMain.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libboost_system.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOpenGL.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libsfml-audio.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libsfml-network.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libSDL.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOIS.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/libOgreOverlay.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractAppState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AbstractAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ActiveGameState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Checkbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Checkbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClientListencer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ClientListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClientMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ClientMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DefConfigs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExitButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExitButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiAppState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiRect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiRect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GuiText.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GuiText.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InGameAppState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InputManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Key.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Key.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Listbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Listbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptionsButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OptionsButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Projectile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServerListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServerMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServerMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Slider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Slider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StateManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StateManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Textbox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Textbox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Util.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Weapon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ogre.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="plugins.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
