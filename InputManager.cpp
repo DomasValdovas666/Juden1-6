@@ -20,9 +20,12 @@ core::InputManager::InputManager(GameManager *gM, RenderWindow *window) {
     OIS::InputManager *ip = OIS::InputManager::createInputSystem(pl);
     if(USE_KEYBOARD == 1)
         keyboard = static_cast<Keyboard*> (ip->createInputObject(OISKeyboard, true));
-    if(USE_MOUSE == 1)
+    if(USE_MOUSE == 1){
         mouse = static_cast<Mouse*> (ip->createInputObject(OISMouse, true));
-    cursor = new gui::GuiRect(gM->getSceneManager(),Vector2(0,0),Vector2(10,10),PATH+"Textures/cursor.png");
+        mouse->getMouseState().width=width;
+        mouse->getMouseState().height=height;
+    }
+//    cursor = new gui::GuiRect(gM->getSceneManager(),Vector2(0,0),Vector2(50,50),"rockwall.tga");
 }
 
 void core::InputManager::update() {
@@ -30,7 +33,7 @@ void core::InputManager::update() {
         keyboard->capture();
     if(mouse){
         Vector2 pos=Vector2(mouse->getMouseState().X.abs,mouse->getMouseState().Y.abs);
-        cursor->setPos(pos);
+  //      cursor->setPos(pos);
         mouse->capture();
     }
     for (int i = 0; i < stateManager->getNumberOfStates(); i++) {

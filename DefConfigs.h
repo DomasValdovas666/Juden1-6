@@ -9,7 +9,7 @@ using namespace std;
 
 namespace game{
     namespace core {
-        static const string PATH="Assets/",name="Juden1,6";
+        static const string PATH="/home/dominykas/c++/Juden1,6/Assets/",name="Juden1,6";
         static int width=800,height=600,fullscreen=0;
 
         static const int stateNumber=3,maxBindNumber=3;

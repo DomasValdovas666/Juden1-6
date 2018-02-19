@@ -9,7 +9,7 @@ GuiText::GuiText(Vector2 pos,string entry){
     string fontName=util::getAdress(this)+"Font";
     font = FontManager::getSingleton().create(fontName, "General");
     font->setType(FT_TRUETYPE);
-    font->setSource("Fonts/Courier Prime.ttf");
+    font->setSource(core::PATH+"Fonts/batang.ttf");
     font->setTrueTypeSize(30);
     font->setTrueTypeResolution(30);
     font->setParameter("size", "26");

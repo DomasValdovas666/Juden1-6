@@ -13,8 +13,8 @@ void StateManager::update() {
 }
 
 void StateManager::attachState(AbstractAppState *a) {
-    a->onAttachment();
     states.push_back(a);
+    a->onAttachment();
 }
 
 void StateManager::dettachState(AbstractAppState *a) {

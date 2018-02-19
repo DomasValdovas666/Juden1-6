@@ -6,6 +6,7 @@ using namespace core;
 
 AbstractAppState::AbstractAppState(GameManager *gM) {
     gameManager = gM;
+    
 }
 
 void AbstractAppState::update() {
@@ -15,7 +16,7 @@ void AbstractAppState::update() {
 void AbstractAppState::onAttachment() {
     attached = true;
     int stateId=(int)type;
-    for(int i=0;i<core::bindNumbers[stateId];i++)
+    for(int i=0;i<bindNumbers[stateId];i++)
         keys.push_back(new Key(binds[stateId][i],triggers[stateId][i],isKey[stateId][i],isAction[stateId][i]));
 }
 

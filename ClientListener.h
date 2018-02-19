@@ -1,12 +1,13 @@
-#pragma once
-#ifndef CLIENTLISTENER_H
-#define CLIENTLISTENER_H
+#ifndef CLIENT
+#define CLIENT
 
-namespace main{
-    namespace net{
-        
+#include<SFML/Network.hpp>
+
+namespace game {
+    namespace net {
+        void listen();
     }
 }
 
-#endif /* CLIENTLISTENER_H */
+#endif
 

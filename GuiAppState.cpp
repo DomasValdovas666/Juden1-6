@@ -1,12 +1,12 @@
 #include"GuiAppState.h"
+#include<iostream>
 
 using namespace game;
 using namespace core;
 
 GuiAppState::GuiAppState(GameManager *gM) : AbstractAppState(gM) {
-
+    type=StateType::GUI_STATE;
 }
-
 
 void GuiAppState::update() {
     for (gui::Button *b : buttons)
