@@ -1,51 +1,49 @@
 #include"AbstractAppState.h"
 #include"DefConfigs.h"
 
-using namespace game;
-using namespace core;
+namespace game {
+    namespace core {
+        AbstractAppState::AbstractAppState(GameManager *gM) {
+            gameManager=gM;
+        }
+        void AbstractAppState::update() {
+        }
 
-AbstractAppState::AbstractAppState(GameManager *gM) {
-    gameManager = gM;
-    
-}
+        void AbstractAppState::onAttachment() {
+            attached = true;
+            int stateId=(int)type;
+            for(int i=0;i<bindNumbers[stateId];i++)
+                keys.push_back(new Key(binds[stateId][i],triggers[stateId][i],isKey[stateId][i],isAction[stateId][i]));
+        }
 
-void AbstractAppState::update() {
+        void AbstractAppState::onDettachment() {
+            attached = false;
+        }
 
-}
+        StateType AbstractAppState::getType() {
+            return type;
+        }
 
-void AbstractAppState::onAttachment() {
-    attached = true;
-    int stateId=(int)type;
-    for(int i=0;i<bindNumbers[stateId];i++)
-        keys.push_back(new Key(binds[stateId][i],triggers[stateId][i],isKey[stateId][i],isAction[stateId][i]));
-}
+        bool AbstractAppState::isAttached() {
+            return attached;
+        }
 
-void AbstractAppState::onDettachment() {
-    attached = false;
-}
+        int AbstractAppState::getNumberOfKeys(){
+            return keys.size();
+        }
 
-StateType AbstractAppState::getType() {
-    return type;
-}
+        Key* AbstractAppState::getKey(int i){
+            return keys[i];
+        }
 
-bool AbstractAppState::isAttached() {
-    return attached;
-}
+        GameManager* AbstractAppState::getGameManager() {
+            return gameManager;
+        }
 
-int AbstractAppState::getNumberOfKeys(){
-    return keys.size();
-}
+        void AbstractAppState::onAction(string bind, bool isPressed) {
+        }
 
-Key* AbstractAppState::getKey(int i){
-    return keys[i];
-}
-
-GameManager* AbstractAppState::getGameManager() {
-    return gameManager;
-}
-
-void AbstractAppState::onAction(string bind, bool isPressed) {
-}
-
-void AbstractAppState::onAnalog(string bind, float str) {
+        void AbstractAppState::onAnalog(string bind, float str) {
+        }
+    }
 }

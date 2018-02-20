@@ -158,5 +158,10 @@ void Listbox::changeLine(int id, string newLine) {
 }
 
 void Listbox::remove(){
+    for(int i=0;i<lines.size();i++)
+        lines[i]->remove();
+    listboxButton->remove();
+    scrollingButton->remove();
+    selRect->remove();
     delete this;
 }

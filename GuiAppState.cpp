@@ -48,14 +48,16 @@ void GuiAppState::removeButton(string name){
     for(int i=0;i<buttons.size()&&!found;i++)
         if(name==buttons[i]->getName()){
             found=true;
-            delete buttons[i];
+            buttons[i]->remove();
             buttons.erase(buttons.begin()+i);
         }
 }
 
 void GuiAppState::removeAllButtons() {
-    for (gui::Button *b : buttons)
+    for (gui::Button *b : buttons) {
         removeButton(b);
+        buttons.pop_back();
+    }
 }
 
 void GuiAppState::addListbox(Listbox *l) {
@@ -73,8 +75,10 @@ void GuiAppState::removeListbox(Listbox *l) {
 }
 
 void GuiAppState::removeAllListboxes() {
-    for (Listbox *l : listboxes)
+    for (Listbox *l : listboxes) {
         removeListbox(l);
+        listboxes.pop_back();
+    }
 }
 
 void GuiAppState::addCheckbox(Checkbox *c) {
@@ -92,8 +96,10 @@ void GuiAppState::removeCheckbox(Checkbox *c) {
 }
 
 void GuiAppState::removeAllCheckboxes() {
-    for (Checkbox *c : checkboxes)
+    for (Checkbox *c : checkboxes) {
         removeCheckbox(c);
+        checkboxes.pop_back();
+    }
 }
 
 void GuiAppState::addSlider(gui::Slider *s) {
@@ -111,8 +117,10 @@ void GuiAppState::removeSlider(gui::Slider *s) {
 }
 
 void GuiAppState::removeAllSliders() {
-    for (gui::Slider *s : sliders)
+    for (gui::Slider *s : sliders) {
         removeSlider(s);
+        sliders.pop_back();
+    }
 }
 
 void GuiAppState::addTextbox(Textbox *t) {
@@ -130,8 +138,10 @@ void GuiAppState::removeTextbox(Textbox *t) {
 }
 
 void GuiAppState::removeAllTextboxes() {
-    for (Textbox *t : textboxes)
+    for (Textbox *t : textboxes) {
         removeTextbox(t);
+        textboxes.pop_back();
+    }
 }
 
 void GuiAppState::onAction(string bind, bool isPressed) {

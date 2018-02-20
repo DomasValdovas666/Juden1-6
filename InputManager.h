@@ -7,8 +7,8 @@
 #include"GameManager.h"
 #include"GuiRect.h"
 
-#define USE_KEYBOARD 0
-#define USE_MOUSE 0
+#define USE_KEYBOARD 1
+#define USE_MOUSE 1
 
 using namespace Ogre;
 

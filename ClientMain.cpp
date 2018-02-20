@@ -22,7 +22,7 @@ class PlayButton : public gui::Button{
 
 int main() {
     GameManager *g = new GameManager();
-    GuiAppState *guiState = nullptr;
+    GuiAppState *guiState = new GuiAppState(g);
     g->getStateManager()->attachState(guiState);
     guiState->addButton(new PlayButton(g->getSceneManager(),Vector2(0,0),Vector2(100,30),"Play",true));
     guiState->addButton(new OptionsButton(g,guiState,g->getSceneManager(),Vector2(0,40),Vector2(100,30),"Options",true));

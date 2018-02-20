@@ -198,12 +198,13 @@ OptionsButton::OptionsButton(GameManager *gM,GuiAppState *state, SceneManager *s
 }
 
 void OptionsButton::onClick() {
+    /*
+     */
     ControlsTab *controlsTab = new ControlsTab(gameManager,state, smgr, Vector2(width / 4, height / 10), Vector2(100, 50), "Controls", true);
     MouseTab *mouseTab = new MouseTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 60), Vector2(100, 50), "Mouse", true);
     VideoTab *videoTab = new VideoTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 120), Vector2(100, 50), "Video", true);
     AudioTab *audioTab = new AudioTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 180), Vector2(100, 50), "Audio", true);
     MultiplayerTab *mupltiplayerTab = new MultiplayerTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 240), Vector2(100, 50), "Multiplayer", true);
-    mupltiplayerTab->moveText(-20, 0);
     state->addButton(controlsTab);
     state->addButton(mouseTab);
     state->addButton(videoTab);

@@ -97,6 +97,8 @@ void Textbox::disable() {
 }
 
 void Textbox::remove(){
+    textboxButton->remove();
+    cursorRect->remove();
     delete this;
 }
 

@@ -37,6 +37,8 @@ void Checkbox::check() {
 }
 
 void Checkbox::remove(){
+    xMark->remove();
+    checkboxButton->remove();
     delete this;
 }
 

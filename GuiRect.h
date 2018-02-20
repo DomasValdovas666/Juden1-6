@@ -24,7 +24,9 @@ namespace game {
             ColourValue getColor();
             void setColor(ColourValue);
             void toggleDisplay(bool);
-            virtual void remove();
+            void setZOrder(int);
+            int getZOrder();
+            void remove();
         private:
             SceneManager *smgr;
             Rectangle2D *rect;

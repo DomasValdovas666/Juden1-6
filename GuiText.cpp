@@ -15,7 +15,6 @@ GuiText::GuiText(Vector2 pos,string entry){
     font->setParameter("size", "26");
     font->setParameter("resolution", "96");
     font->load();
-    //delete &(panel->getMaterial());
     OverlayManager &man=OverlayManager::getSingleton();
     overlay=man.create(util::getAdress(this)+"Overlay");
     panel=static_cast<OverlayContainer*>(man.createOverlayElement("Panel",util::getAdress(this)+"Pan"));
@@ -42,10 +41,16 @@ void GuiText::toggleDisplay(bool display) {
 
 void GuiText::remove() {
     overlay->hide();
+    panel->hide();
+    textArea->hide();
+    overlay->remove2D(panel);
+    /*
     delete &font;
     delete textArea;
     delete panel;
     delete overlay;
+     */
+    delete this;
 }
 
 Vector2 GuiText::getPos(){

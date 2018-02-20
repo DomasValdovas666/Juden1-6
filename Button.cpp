@@ -98,6 +98,10 @@ bool Button::isImageButton() {
 }
 
 void Button::remove() {
+    delete color;
+    rect->remove();
+    if(text)
+        text->remove();
     delete this;
 }
 

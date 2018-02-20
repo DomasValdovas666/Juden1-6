@@ -1,7 +1,6 @@
 #include"GuiRect.h"
 #include"Button.h"
 
-using namespace Ogre;
 using namespace game;
 using namespace gui;
 
@@ -58,6 +57,13 @@ void GuiRect::toggleDisplay(bool display) {
 }
 
 void GuiRect::remove() {
+    smgr->getRootSceneNode()->removeChild(node);
+    node->detachObject(rect);
+    /*
+    delete node;
+     */
+    delete rect;
+    delete this;
 }
 
 Vector2 GuiRect::getPos() {
@@ -85,4 +91,12 @@ ColourValue GuiRect::getColor() {
 }
 
 void GuiRect::setColor(ColourValue c) {
+}
+
+void GuiRect::setZOrder(int zOrder){
+    
+}
+
+int GuiRect::getZOrder() {
+    return 0;
 }

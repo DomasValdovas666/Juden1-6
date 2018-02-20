@@ -71,6 +71,10 @@ void Slider::addTextbox(Textbox *t) {
 }
 
 void Slider::remove(){
+    movableSliderButton->remove();
+    staticSliderButton->remove();
+    if(textbox)
+        textbox->remove();
     delete this;
 }
 

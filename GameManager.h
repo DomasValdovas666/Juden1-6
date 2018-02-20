@@ -4,6 +4,7 @@
 
 #include<vector>
 #include<OGRE/Ogre.h>
+#include<SDL/SDL.h>
 #include<OGRE/Overlay/OgreOverlaySystem.h>
 #include"StateManager.h"
 #include"InputManager.h"
@@ -33,10 +34,12 @@ namespace game {
             InputManager* getInputManager();
             StateManager* getStateManager();
             RenderWindow* getWindow();
+            SDL_Surface getSurface();
             Root* getRoot();
         private:
             bool running=true;
             Root *root;
+            SDL_Surface *screen;
             RenderWindow *window;
             SceneManager *smgr;
             StateManager *stateManager;
