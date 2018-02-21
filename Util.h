@@ -22,6 +22,7 @@ namespace game {
             return 1000*time(0);
         }
         string getAdress(void*);
+        string getTimeStr();
         std::vector<double> convCoords(Ogre::Vector2, Ogre::Vector2);
         void readFile(string);
         void writeFile(string);

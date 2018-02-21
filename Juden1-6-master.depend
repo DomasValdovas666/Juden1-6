@@ -1,19 +1,22 @@
 # depslib dependency file v1.0
-1519160247 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/AbstractAppState.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/AbstractAppState.cpp
 	"AbstractAppState.h"
 	"DefConfigs.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/AbstractAppState.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/AbstractAppState.h
 	"Key.h"
 	<vector>
 	<string>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Key.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Key.h
 	<string>
 
-1519149920 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/DefConfigs.h
+1519235934 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/DefConfigs.h
 	<string>
 	<OIS.h>
+	<Ogre.h>
+	<Overlay/OgreFont.h>
+	<vector>
 
 1449337922 /usr/include/OIS/OIS.h
 	"OISPrereqs.h"
@@ -84,11 +87,11 @@
 	"OISInterface.h"
 	"OISEffect.h"
 
-1519074025 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Button.cpp
+1519241507 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Button.cpp
 	"Button.h"
 	"DefConfigs.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Button.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Button.h
 	<Ogre.h>
 	"GuiText.h"
 	"GuiRect.h"
@@ -1485,7 +1488,7 @@
 	<Carbon/Carbon.h>
 	"OgreHeaderSuffix.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiText.h
+1519236395 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiText.h
 	"Util.h"
 	<string>
 	<Ogre.h>
@@ -1496,7 +1499,7 @@
 	<Overlay/OgreOverlayContainer.h>
 	<Overlay/OgreTextAreaOverlayElement.h>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Util.h
+1519230102 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Util.h
 	<time.h>
 	<string>
 	"vector"
@@ -1560,7 +1563,7 @@
 	"OgreRenderOperation.h"
 	"OgreFont.h"
 
-1519073110 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiRect.h
+1519229678 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiRect.h
 	<string>
 	"Util.h"
 	<OGRE/Ogre.h>
@@ -1570,20 +1573,20 @@
 	"OgrePrerequisites.h"
 	"OgreSimpleRenderable.h"
 
-1519074883 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Checkbox.cpp
+1519239399 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Checkbox.cpp
 	"Checkbox.h"
 	"DefConfigs.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Checkbox.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Checkbox.h
 	"Button.h"
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientListencer.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientListencer.cpp
 	"ClientListener.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientListener.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientListener.h
 	<SFML/Network.hpp>
 
-1519067054 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientMain.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientMain.cpp
 	"GameManager.h"
 	"GuiAppState.h"
 	"ClientMain.h"
@@ -1593,7 +1596,7 @@
 	<Ogre.h>
 	<string>
 
-1519068680 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GameManager.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GameManager.h
 	<vector>
 	<OGRE/Ogre.h>
 	<SDL/SDL.h>
@@ -1603,17 +1606,17 @@
 	"GuiRect.h"
 	"GuiText.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/StateManager.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/StateManager.h
 	"AbstractAppState.h"
 	<vector>
 
-1519149529 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/InputManager.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/InputManager.h
 	<OIS/OIS.h>
 	<OGRE/Ogre.h>
 	"GameManager.h"
 	"GuiRect.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiAppState.h
+1519238545 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiAppState.h
 	"GameManager.h"
 	"Button.h"
 	"Listbox.h"
@@ -1623,89 +1626,92 @@
 	<vector>
 	<string>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Listbox.h
+1519241249 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Listbox.h
 	"Button.h"
 	<OIS.h>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Slider.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Slider.h
 	"Button.h"
 	"Textbox.h"
 	<OIS.h>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Textbox.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Textbox.h
 	"Button.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientMain.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ClientMain.h
 	<string>
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/OptionsButton.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/OptionsButton.h
 	"GuiAppState.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ExitButton.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ExitButton.h
 	"Button.h"
 	"GameManager.h"
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ExitButton.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ExitButton.cpp
 	"ExitButton.h"
 
-1519149262 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GameManager.cpp
+1519236093 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GameManager.cpp
 	"GameManager.h"
 	"DefConfigs.h"
+	"FontData.h"
 
-1519147908 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiAppState.cpp
+1519241093 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiAppState.cpp
 	"GuiAppState.h"
 	<iostream>
+	<algorithm>
 
-1519148179 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiRect.cpp
+1519241607 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiRect.cpp
 	"GuiRect.h"
 	"Button.h"
 
-1519148244 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiText.cpp
+1519241569 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/GuiText.cpp
 	"GuiText.h"
-	"DefConfigs.h"
+	"FontData.h"
 
-1519151079 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/InputManager.cpp
+1519242080 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/InputManager.cpp
 	"InputManager.h"
 	"DefConfigs.h"
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Key.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Key.cpp
 	"Key.h"
 
-1519074836 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Listbox.cpp
+1519247208 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Listbox.cpp
 	"Listbox.h"
 	"GuiAppState.h"
 	"DefConfigs.h"
 
-1519147740 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/OptionsButton.cpp
+1519230706 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/OptionsButton.cpp
 	"OptionsButton.h"
 	"DefConfigs.h"
+	"ExitButton.h"
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Player.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Player.cpp
 	"Player.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Player.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Player.h
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ServerMain.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ServerMain.cpp
 	"ServerMain.h"
 
-1519065779 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ServerMain.h
+1519226358 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/ServerMain.h
 
-1519075081 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Slider.cpp
+1519239427 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Slider.cpp
 	"Slider.h"
 	<algorithm>
 	"DefConfigs.h"
 	"Util.h"
 	<sstream>
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/StateManager.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/StateManager.cpp
 	"StateManager.h"
 
-1519077838 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Textbox.cpp
+1519240140 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Textbox.cpp
 	"Textbox.h"
 	"DefConfigs.h"
 	"Util.h"
 
-1519065779 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Util.cpp
+1519226358 source:/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Util.cpp
 	"Util.h"
 	<sstream>
 	"DefConfigs.h"
@@ -1910,5 +1916,9 @@
 
 1519208090 source:/home/dominykas/c++/Juden1-6-master/Button.cpp
 	"Button.h"
+	"DefConfigs.h"
+
+1519236117 /run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/FontData.h
+	<string>
 	"DefConfigs.h"
 

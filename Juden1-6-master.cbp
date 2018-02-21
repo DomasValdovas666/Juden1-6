@@ -56,6 +56,7 @@
 		<Unit filename="DefConfigs.h" />
 		<Unit filename="ExitButton.cpp" />
 		<Unit filename="ExitButton.h" />
+		<Unit filename="FontData.h" />
 		<Unit filename="GameManager.cpp" />
 		<Unit filename="GameManager.h" />
 		<Unit filename="GuiAppState.cpp" />

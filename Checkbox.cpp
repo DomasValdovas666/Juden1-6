@@ -38,7 +38,6 @@ namespace game {
 
         void Checkbox::remove(){
             xMark->remove();
-            checkboxButton->remove();
             delete this;
         }
 

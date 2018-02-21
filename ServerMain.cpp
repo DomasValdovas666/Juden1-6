@@ -1,7 +1,5 @@
 #include"ServerMain.h"
 
-namespace game {
-    namespace net {
-        
-    }
+int main(){
+    return 0;
 }

@@ -1,12 +1,13 @@
 #include"GuiText.h"
-#include"DefConfigs.h"
+#include"FontData.h"
 
 using namespace Ogre;
 
 namespace game {
     namespace gui {
         GuiText::GuiText(Vector2 pos,string entry){
-            string fontName=util::getAdress(this)+"Font";
+            /*
+            fontName=util::getAdress(this)+"Font";
             font = FontManager::getSingleton().create(fontName, "General");
             font->setType(FT_TRUETYPE);
             font->setSource(core::PATH+"Fonts/batang.ttf");
@@ -15,6 +16,7 @@ namespace game {
             font->setParameter("size", "26");
             font->setParameter("resolution", "96");
             font->load();
+            */
             OverlayManager &man=OverlayManager::getSingleton();
             overlay=man.create(util::getAdress(this)+"Overlay");
             panel=static_cast<OverlayContainer*>(man.createOverlayElement("Panel",util::getAdress(this)+"Pan"));
@@ -26,7 +28,7 @@ namespace game {
             textArea->setMetricsMode(GMM_PIXELS);
             textArea->setDimensions(1,1);
             textArea->setPosition(0,0);
-            textArea->setFontName(fontName);
+            textArea->setFontName(core::fontName[0]);
             textArea->setCaption(entry);
             textArea->setCharHeight(30);
             textArea->setColour(ColourValue::White);
@@ -44,9 +46,12 @@ namespace game {
             panel->hide();
             textArea->hide();
             overlay->remove2D(panel);
+            Ogre::OverlayManager &man = OverlayManager::getSingleton();
+            man.destroyOverlayElement(textArea);
+            man.destroyOverlayElement(panel);
+            man.destroy(overlay);
             /*
             delete &font;
-            delete textArea;
             delete panel;
             delete overlay;
              */
@@ -59,7 +64,7 @@ namespace game {
 
         void GuiText::setPos(Ogre::Vector2 p){
             pos=p;
-            textArea->setPosition(pos.x,pos.y);
+            panel->setPosition(pos.x,pos.y);
         }
 
         string GuiText::getEntry() {

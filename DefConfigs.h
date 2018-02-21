@@ -2,15 +2,19 @@
 #ifndef DEFCONFIGS_H
 #define DEFCONFIGS_H
 
-#include <string>
-#include <OIS.h>
+#include<string>
+#include<OIS.h>
+#include<Ogre.h>
+#include<Overlay/OgreFont.h>
+#include<vector>
 
 using namespace std;
 
 namespace game{
     namespace core {
-        static const string PATH="/home/dominykas/c++/Juden1-6-master/Assets/",name="Juden1,6";
+        static const string PATH="/run/media/dominykas/New Volume/Users/Dominykas/workspace(c++)/Juden1-6-master/Assets/",name="Juden1,6";
         static int width=800,height=600,fullscreen=0,win32=0;
+        static std::vector<Ogre::FontPtr> fonts;
 
         static const int stateNumber=3,maxBindNumber=3;
         static const int bindNumbers[stateNumber]{1,0,0};

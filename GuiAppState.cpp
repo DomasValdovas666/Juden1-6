@@ -1,5 +1,6 @@
 #include"GuiAppState.h"
 #include<iostream>
+#include<algorithm>
 
 namespace game {
     namespace core {
@@ -45,7 +46,7 @@ namespace game {
         void GuiAppState::removeButton(string name){
             bool found=false;
             for(int i=0;i<buttons.size()&&!found;i++)
-                if(name==buttons[i]->getName()){
+                if(name==buttons[i]->getName()&&buttons[i]->isSeparate()){
                     found=true;
                     buttons[i]->remove();
                     buttons.erase(buttons.begin()+i);
@@ -53,42 +54,57 @@ namespace game {
         }
 
         void GuiAppState::removeAllButtons() {
-            while(!buttons.empty()) {
-                buttons[buttons.size()-1]->remove();
-                buttons.pop_back();
+            int separateButtons=0;
+            for(int i=0;i<buttons.size();i++)
+                if(buttons[i]->isSeparate())
+                    separateButtons++;
+            for(int i=0;separateButtons==0;i++) {
+                if(buttons[i]->isSeparate()) {
+                    buttons[i]->remove();
+                    buttons.erase(buttons.begin()+i);
+                    separateButtons--;
+                }
             }
         }
 
-        void GuiAppState::addListbox(Listbox *l) {
+        void GuiAppState::addListbox(gui::Listbox *l) {
             listboxes.push_back(l);
+            buttons.push_back(l->getListboxButton());
+            buttons.push_back(l->getScrollingButton());
         }
 
-        void GuiAppState::removeListbox(Listbox *l) {
+        void GuiAppState::removeListbox(gui::Listbox *l) {
             bool found = false;
             for (int i = 0; i < listboxes.size()&&!found; i++)
                 if (l == listboxes[i]) {
                     found = true;
-                    l->remove();
+                    removeButton(l->getScrollingButton());
+                    removeButton(l->getListboxButton());
                     listboxes.erase(listboxes.begin() + i);
                 }
         }
 
         void GuiAppState::removeAllListboxes() {
             while (!listboxes.empty()) {
-                listboxes[listboxes.size()-1]->remove();
+                gui::Listbox *l=listboxes[listboxes.size()-1];
+                removeButton(l->getListboxButton());
+                removeButton(l->getScrollingButton());
+                l->remove();
                 listboxes.pop_back();
             }
         }
 
         void GuiAppState::addCheckbox(Checkbox *c) {
             checkboxes.push_back(c);
+            buttons.push_back(c->getCheckboxButton());
         }
 
-        void GuiAppState::removeCheckbox(Checkbox *c) {
+        void GuiAppState::removeCheckbox(gui::Checkbox *c) {
             bool found = false;
             for (int i = 0; i < checkboxes.size()&&!found; i++)
                 if (c == checkboxes[i]) {
                     found = true;
+                    removeButton(c->getCheckboxButton());
                     c->remove();
                     checkboxes.erase(checkboxes.begin() + i);
                 }
@@ -96,13 +112,17 @@ namespace game {
 
         void GuiAppState::removeAllCheckboxes() {
             while(!checkboxes.empty()) {
-                checkboxes[checkboxes.size()-1]->remove();
+                gui::Checkbox *c=checkboxes[checkboxes.size()-1];
+                removeButton(c->getCheckboxButton());
+                c->remove();
                 checkboxes.pop_back();
             }
         }
 
         void GuiAppState::addSlider(gui::Slider *s) {
             sliders.push_back(s);
+            buttons.push_back(s->getMovableSliderButton());
+            buttons.push_back(s->getStaticSliderButton());
         }
 
         void GuiAppState::removeSlider(gui::Slider *s) {
@@ -110,6 +130,8 @@ namespace game {
             for (int i = 0; i < sliders.size()&&!found; i++)
                 if (s == sliders[i]) {
                     found = true;
+                    removeButton(s->getMovableSliderButton());
+                    removeButton(s->getStaticSliderButton());
                     s->remove();
                     sliders.erase(sliders.begin() + i);
                 }
@@ -117,20 +139,25 @@ namespace game {
 
         void GuiAppState::removeAllSliders() {
             while(!sliders.empty()) {
-                sliders[sliders.size()-1]->remove();
+                gui::Slider *s=sliders[sliders.size()-1];
+                removeButton(s->getStaticSliderButton());
+                removeButton(s->getMovableSliderButton());
+                s->remove();
                 sliders.pop_back();
             }
         }
 
-        void GuiAppState::addTextbox(Textbox *t) {
+        void GuiAppState::addTextbox(gui::Textbox *t) {
             textboxes.push_back(t);
+            buttons.push_back(t->getTextboxButton());
         }
 
-        void GuiAppState::removeTextbox(Textbox *t) {
+        void GuiAppState::removeTextbox(gui::Textbox *t) {
             bool found = false;
             for (int i = 0; i < textboxes.size()&&!found; i++)
                 if (t == textboxes[i]) {
                     found = true;
+                    removeButton(t->getTextboxButton());
                     t->remove();
                     textboxes.erase(textboxes.begin() + i);
                 }
@@ -138,7 +165,9 @@ namespace game {
 
         void GuiAppState::removeAllTextboxes() {
             while(!textboxes.empty()){
-                textboxes[textboxes.size()-1]->remove();
+                gui::Textbox *t=textboxes[textboxes.size()-1];
+                removeButton(t->getTextboxButton());
+                t->remove();
                 textboxes.pop_back();
             }
         }

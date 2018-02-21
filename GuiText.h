@@ -33,7 +33,6 @@ namespace game {
             void remove();
         private:
             Vector2 pos;
-            FontPtr font;
             OverlayContainer *panel;
             Overlay *overlay;
             TextAreaOverlayElement *textArea;

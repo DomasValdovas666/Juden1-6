@@ -7,6 +7,7 @@ namespace game {
             this->smgr=smgr;
             this->pos=pos;
             this->size=size;
+            matName=util::getAdress(this)+"Mat";
             setupRect();
             rect->setMaterial(setupColorMat(color));
         }
@@ -15,12 +16,13 @@ namespace game {
             this->smgr=smgr;
             this->pos=pos;
             this->size=size;
+            matName=util::getAdress(this)+"Mat";
             setupRect();
             rect->setMaterial(setupImageMat(imagePath));
         }
 
         MaterialPtr GuiRect::setupImageMat(string imagePath){
-            Ogre::MaterialPtr mat = MaterialManager::getSingleton().create(util::getAdress(this)+"Mat", "General");
+            Ogre::MaterialPtr mat = MaterialManager::getSingleton().create(matName, "General");
             Pass *pass = mat->getTechnique(0)->getPass(0);
             pass->createTextureUnitState(imagePath);
             pass->setDepthCheckEnabled(false);
@@ -30,7 +32,7 @@ namespace game {
         }
 
         MaterialPtr GuiRect::setupColorMat(ColourValue color){
-            MaterialPtr mat = MaterialManager::getSingleton().create(util::getAdress(this)+"Mat", "General");
+            MaterialPtr mat = MaterialManager::getSingleton().create(matName, "General");
             Pass *pass = mat->getTechnique(0)->getPass(0);
             pass->setDepthCheckEnabled(false);
             pass->setDepthWriteEnabled(false);
@@ -58,9 +60,8 @@ namespace game {
         void GuiRect::remove() {
             smgr->getRootSceneNode()->removeChild(node);
             node->detachObject(rect);
-            /*
-            delete node;
-             */
+            Ogre::MaterialManager::getSingleton().unload(matName,"General");
+            Ogre::MaterialManager::getSingleton().remove(matName,"General");
             delete rect;
             delete this;
         }

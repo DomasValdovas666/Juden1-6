@@ -71,6 +71,7 @@ namespace game {
 
         void Button::setSize(Vector2 s) {
             size = s;
+            rect->setSize(s);
         }
 
         ColourValue* Button::getColor() {

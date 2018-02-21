@@ -28,8 +28,9 @@ namespace game {
             int getZOrder();
             void remove();
         private:
-            SceneManager *smgr;
-            Rectangle2D *rect;
+            Ogre::SceneManager *smgr;
+            Ogre::Rectangle2D *rect;
+            string matName;
             SceneNode *node;
             Vector2 pos, size;
             MaterialPtr setupImageMat(string);

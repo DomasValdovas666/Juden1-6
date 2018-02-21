@@ -36,6 +36,7 @@ namespace game {
             };
             class ScrollingButton : public Button {
             public:
+
                 ScrollingButton(SceneManager*,Vector2, Vector2, string, bool);
                 void onClick();
             private:
@@ -45,11 +46,12 @@ namespace game {
             std::vector<GuiText*> lines;
             Vector2 pos, size;
             ListboxButton *listboxButton;
-            Button *scrollingButton;
+            ScrollingButton *scrollingButton;
             GuiRect *selRect;
             Mouse *mouse;
         public:
             ListboxButton* getListboxButton();
+            ScrollingButton* getScrollingButton();
         };
     }
 }

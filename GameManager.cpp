@@ -1,5 +1,6 @@
 #include "GameManager.h"
 #include "DefConfigs.h"
+#include"FontData.h"
 
 using namespace Ogre;
 using namespace game::gui;
@@ -26,6 +27,17 @@ namespace game {
             viewport->setClearEveryFrame(true);
             stateManager=new StateManager(this);
             inputManager = new game::core::InputManager(this,window);
+            for(int i=0;i<core::numberOfFonts;i++) {
+                Ogre::FontPtr font = Ogre::FontManager::getSingleton().create(core::fontName[i], "General");
+                font->setType(FT_TRUETYPE);
+                font->setSource(core::fontPath[i]);
+                font->setTrueTypeSize(30);
+                font->setTrueTypeResolution(30);
+                font->setParameter("size", "26");
+                font->setParameter("resolution", "96");
+                font->load();
+                core::fonts.push_back(font);
+            }
          }
 
         void GameManager::update() {

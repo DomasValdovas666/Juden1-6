@@ -23,6 +23,7 @@ namespace game {
             this->size = size;
             textboxButton = new TextboxButton(this, smgr,pos, size, "TextboxButton", false);
             cursorRect=new GuiRect(smgr,pos,Vector2(cursorWidth,size.y),ColourValue(.4,.4,.4));
+            cursorRect->toggleDisplay(false);
             //font = gameManager->getDevice()->getGUIEnvironment()->getFont(PATH + "Fonts/bigfont.png");
         }
 
@@ -97,7 +98,6 @@ namespace game {
         }
 
         void Textbox::remove(){
-            textboxButton->remove();
             cursorRect->remove();
             delete this;
         }

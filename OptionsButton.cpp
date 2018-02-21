@@ -198,8 +198,6 @@ namespace game {
         }
 
         void OptionsButton::onClick() {
-            /*
-             */
             ControlsTab *controlsTab = new ControlsTab(gameManager,state, smgr, Vector2(width / 4, height / 10), Vector2(100, 50), "Controls", true);
             MouseTab *mouseTab = new MouseTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 60), Vector2(100, 50), "Mouse", true);
             VideoTab *videoTab = new VideoTab(gameManager,state, smgr, Vector2(width / 4, height / 10 + 120), Vector2(100, 50), "Video", true);

@@ -71,8 +71,6 @@ namespace game {
         }
 
         void Slider::remove(){
-            movableSliderButton->remove();
-            staticSliderButton->remove();
             if(textbox)
                 textbox->remove();
             delete this;
