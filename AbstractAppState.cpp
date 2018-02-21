@@ -6,6 +6,7 @@ namespace game {
         AbstractAppState::AbstractAppState(GameManager *gM) {
             gameManager=gM;
         }
+
         void AbstractAppState::update() {
         }
 

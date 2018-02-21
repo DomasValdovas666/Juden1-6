@@ -33,19 +33,16 @@ int main() {
 
 namespace game{
     namespace net {
-        /*
         Client::Client(string ipAddress, int tcp, int udp){
             this->ipAddress=ipAddress;
             tcpPort=tcp;
             udpPort=udp;
         }
-        
+
         void Client::connect(){
         }
-        
+
         void Client::update(){
-            listen();
         }
-         */
     }
 }

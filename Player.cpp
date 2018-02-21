@@ -1,7 +1,13 @@
 #include"Player.h"
 
-using namespace game::content;
-
-Player::Player(){}
-
-void Player::update(){}
+namespace game {
+    namespace content {
+        Player::Player(){
+        }
+        Player::~Player(){}
+        void Player::update(){
+        }
+        void Player::equip(){
+        }
+    }
+}

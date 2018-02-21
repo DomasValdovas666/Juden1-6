@@ -2,8 +2,8 @@
 
 namespace game {
     namespace net {
-        void listen() {
-            
+        void listen(){
+
         }
     }
 }

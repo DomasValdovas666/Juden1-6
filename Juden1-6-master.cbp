@@ -30,9 +30,70 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="/usr/include/OGRE" />
+			<Add directory="/usr/include/OIS" />
+			<Add directory="/usr/include/SFML" />
 		</Compiler>
+		<Linker>
+			<Add library="/usr/lib/libOgreMain.so" />
+			<Add library="/usr/lib/libboost_system.so" />
+			<Add library="/usr/lib/libOpenGL.so" />
+			<Add library="/usr/lib/libOgreOverlay.so" />
+			<Add library="/usr/lib/libOIS.so" />
+			<Add directory="/usr/lib/" />
+		</Linker>
+		<Unit filename="AbstractAppState.cpp" />
+		<Unit filename="AbstractAppState.h" />
+		<Unit filename="ActiveGameState.h" />
+		<Unit filename="Button.cpp" />
+		<Unit filename="Button.h" />
+		<Unit filename="Checkbox.cpp" />
+		<Unit filename="Checkbox.h" />
+		<Unit filename="ClientListencer.cpp" />
+		<Unit filename="ClientListener.h" />
+		<Unit filename="ClientMain.cpp" />
+		<Unit filename="ClientMain.h" />
+		<Unit filename="DefConfigs.h" />
+		<Unit filename="ExitButton.cpp" />
+		<Unit filename="ExitButton.h" />
+		<Unit filename="GameManager.cpp" />
+		<Unit filename="GameManager.h" />
+		<Unit filename="GuiAppState.cpp" />
+		<Unit filename="GuiAppState.h" />
+		<Unit filename="GuiRect.cpp" />
+		<Unit filename="GuiRect.h" />
+		<Unit filename="GuiText.cpp" />
+		<Unit filename="GuiText.h" />
+		<Unit filename="InGameAppState.h" />
+		<Unit filename="InputManager.cpp" />
+		<Unit filename="InputManager.h" />
+		<Unit filename="Key.cpp" />
+		<Unit filename="Key.h" />
+		<Unit filename="Listbox.cpp" />
+		<Unit filename="Listbox.h" />
+		<Unit filename="OptionsButton.cpp" />
+		<Unit filename="OptionsButton.h" />
+		<Unit filename="Player.cpp" />
+		<Unit filename="Player.h" />
+		<Unit filename="Projectile.h" />
+		<Unit filename="ServerListener.h" />
+		<Unit filename="ServerMain.cpp" />
+		<Unit filename="ServerMain.h" />
+		<Unit filename="Slider.cpp" />
+		<Unit filename="Slider.h" />
+		<Unit filename="StateManager.cpp" />
+		<Unit filename="StateManager.h" />
+		<Unit filename="Textbox.cpp" />
+		<Unit filename="Textbox.h" />
+		<Unit filename="Util.cpp" />
+		<Unit filename="Util.h" />
+		<Unit filename="Weapon.h" />
 		<Extensions>
-			<code_completion />
+			<code_completion>
+				<search_path add="/home/dominykas/c++/Juden1-6-master" />
+				<search_path add="/usr/include/OGRE" />
+				<search_path add="/usr/include/OIS" />
+			</code_completion>
 			<envvars />
 			<lib_finder disable_auto="1" />
 			<debugger />

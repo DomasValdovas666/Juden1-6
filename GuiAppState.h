@@ -44,10 +44,10 @@ namespace game{
             void onAnalog(string,float);
         private:
             std::vector<gui::Button*> buttons;
-            std::vector<Listbox*> listboxes;
-            std::vector<Checkbox*> checkboxes;
+            std::vector<gui::Listbox*> listboxes;
+            std::vector<gui::Checkbox*> checkboxes;
             std::vector<gui::Slider*> sliders;
-            std::vector<Textbox*> textboxes;
+            std::vector<gui::Textbox*> textboxes;
         };
     }
 }

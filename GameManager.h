@@ -2,14 +2,14 @@
 #ifndef GAMEMANAGER_H
 #define GAMEMANAGER_H
 
-#include<vector>
-#include<OGRE/Ogre.h>
-#include<SDL/SDL.h>
-#include<OGRE/Overlay/OgreOverlaySystem.h>
-#include"StateManager.h"
-#include"InputManager.h"
-#include"GuiRect.h"
-#include"GuiText.h"
+#include <vector>
+#include <OGRE/Ogre.h>
+#include <SDL/SDL.h>
+#include <OGRE/Overlay/OgreOverlaySystem.h>
+#include "StateManager.h"
+#include "InputManager.h"
+#include "GuiRect.h"
+#include "GuiText.h"
 
 using namespace Ogre;
 using namespace game::gui;
@@ -21,6 +21,7 @@ namespace game {
         public:
             GameManager();
             ~GameManager(){}
+            void foo();
             void update();
             bool isRunning();
             void setIsRunning(bool);
@@ -38,7 +39,7 @@ namespace game {
             Root* getRoot();
         private:
             bool running=true;
-            Root *root;
+            Ogre::Root *root;
             SDL_Surface *screen;
             RenderWindow *window;
             SceneManager *smgr;
