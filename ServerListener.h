@@ -4,7 +4,7 @@
 
 namespace main{
     namespace net{
-        
+        void listen();
     }
 }
 

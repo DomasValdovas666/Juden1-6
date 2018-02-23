@@ -4,6 +4,10 @@
 
 namespace main{
     namespace net{
+        class Server {
+        public:
+        private:
+        };
     }
 }
 
