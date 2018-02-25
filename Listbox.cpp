@@ -36,7 +36,8 @@ namespace game {
             this->lines[0]->toggleDisplay(true);
             listboxButton = new ListboxButton(this, smgr,pos, size, "ListboxButton", false);
             scrollingButton = new ScrollingButton(smgr,Vector2(pos.x + size.x - 20, pos.y + 20), Vector2(20, 20.0 * (maxDisplay - 2) / (lines.size() - maxDisplay)), "scrollingButton", false);
-            selRect=new GuiRect(smgr,pos,size,ColourValue(.5,.5,0));
+            selRect=new GuiRect(smgr,pos,size,ColourValue(.6,.35,.05));
+            selRect->toggleDisplay(false);
         }
 
         Listbox::~Listbox() {
@@ -47,16 +48,14 @@ namespace game {
             if (open) {
                 //gameManager->getDevice()->getVideoDriver()->draw2DRectangle(*listboxButton->getColor(), rect<s32>(pos.X, pos.Y, pos.X + size.X, pos.Y + size.Y * maxDisplay), nullptr);
                 int mousePosY = mouse->getMouseState().Y.abs;
-                for (int i = 0; i < maxDisplay; i++) {
-                    Vector2 p=pos;
-                    if (mousePosY < pos.y)
-                        p.y=pos.y;
-                    else if (mousePosY > pos.y + size.y * maxDisplay)
-                        p.y=pos.y+size.y*(maxDisplay-1);
-                    else
-                        p.y=pos.y+(int)(mousePosY-pos.y)%(int)size.y;
-                    selRect->setPos(p);
-                }
+                Vector2 p=pos;
+                if (mousePosY>pos.y&&mousePosY<pos.y+size.y*maxDisplay)
+                    p.y=pos.y+size.y*((int)(mousePosY-pos.y)/((int)size.y));
+                else if (mousePosY < pos.y)
+                    p.y=pos.y;
+                else
+                    p.y=pos.y+size.y*(maxDisplay-1);
+                selRect->setPos(p);
                 for (int i = 0; i < maxDisplay; i++) {
                     //font->draw(lines[i + scrollOffset], rect<s32>(pos.X, pos.Y + size.Y*i, pos.X + size.X, pos.Y + size.Y * (i + 1)), SColor(255, 255, 255, 255));
                 }
@@ -85,10 +84,9 @@ namespace game {
             Vector2 size = listboxButton->getSize();
             size.y *= maxDisplay;
             listboxButton->setSize(size);
-            /*
+            selRect->toggleDisplay(true);
             for(int i=scrollOffset;i<scrollOffset+maxDisplay;i++)
-                lines[i]->setCol(1,1,1,1);
-             */
+                lines[i]->toggleDisplay(true);
         }
 
         void Listbox::close() {
@@ -96,14 +94,9 @@ namespace game {
             Vector2 size = listboxButton->getSize();
             size.y /= maxDisplay;
             listboxButton->setSize(size);
-            /*
-            for(int i=0;i<lines.size();i++){
-                if(i==scrollOffset)
-                    lines[i]->setCol(1,1,1,1);
-                else
-                    lines[i]->setCol(1,1,1,0);
-            }
-             */
+            selRect->toggleDisplay(false);
+            for(int i=scrollOffset+1;i<scrollOffset+maxDisplay;i++)
+                lines[i]->toggleDisplay(false);
         }
 
         void Listbox::scrollUp() {

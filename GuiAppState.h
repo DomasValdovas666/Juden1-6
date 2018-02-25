@@ -48,6 +48,13 @@ namespace game{
             std::vector<gui::Checkbox*> checkboxes;
             std::vector<gui::Slider*> sliders;
             std::vector<gui::Textbox*> textboxes;
+            const int keyboardTriggers[3][2]{
+                {0x02,0x0B},
+                {0x10,0x1B},
+                {0x1E,0x35}
+            };
+            void addKeyboardKeys();
+            void checkKeyboardKeys(Textbox*,string);
         };
     }
 }

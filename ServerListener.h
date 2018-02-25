@@ -2,7 +2,7 @@
 #ifndef SERVERLISTENER_H
 #define SERVERLISTENER_H
 
-namespace main{
+namespace game{
     namespace net{
         void listen();
     }

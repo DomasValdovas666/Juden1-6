@@ -6,7 +6,7 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug">
+			<Target title="ClientDebug">
 				<Option output="bin/Debug/Juden1-6-master" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
@@ -15,7 +15,28 @@
 					<Add option="-g" />
 				</Compiler>
 			</Target>
-			<Target title="Release">
+			<Target title="ClientRelease">
+				<Option output="bin/Release/Juden1-6-master" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="ServerDebug">
+				<Option output="bin/Debug/Juden1-6-master" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="ServerRelease">
 				<Option output="bin/Release/Juden1-6-master" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
@@ -42,50 +63,167 @@
 			<Add library="/usr/lib/libOIS.so" />
 			<Add directory="/usr/lib/" />
 		</Linker>
-		<Unit filename="AbstractAppState.cpp" />
-		<Unit filename="AbstractAppState.h" />
-		<Unit filename="ActiveGameState.h" />
-		<Unit filename="Button.cpp" />
-		<Unit filename="Button.h" />
-		<Unit filename="Checkbox.cpp" />
-		<Unit filename="Checkbox.h" />
-		<Unit filename="ClientListencer.cpp" />
-		<Unit filename="ClientListener.h" />
-		<Unit filename="ClientMain.cpp" />
-		<Unit filename="ClientMain.h" />
+		<Unit filename="AbstractAppState.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="AbstractAppState.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ActiveGameState.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Button.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Button.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Checkbox.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Checkbox.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ClientListencer.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ClientListener.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ClientMain.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ClientMain.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
 		<Unit filename="DefConfigs.h" />
-		<Unit filename="ExitButton.cpp" />
-		<Unit filename="ExitButton.h" />
+		<Unit filename="ExitButton.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="ExitButton.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
 		<Unit filename="FontData.h" />
-		<Unit filename="GameManager.cpp" />
-		<Unit filename="GameManager.h" />
-		<Unit filename="GuiAppState.cpp" />
-		<Unit filename="GuiAppState.h" />
-		<Unit filename="GuiRect.cpp" />
-		<Unit filename="GuiRect.h" />
-		<Unit filename="GuiText.cpp" />
-		<Unit filename="GuiText.h" />
-		<Unit filename="InGameAppState.h" />
-		<Unit filename="InputManager.cpp" />
-		<Unit filename="InputManager.h" />
-		<Unit filename="Key.cpp" />
-		<Unit filename="Key.h" />
-		<Unit filename="Listbox.cpp" />
-		<Unit filename="Listbox.h" />
-		<Unit filename="OptionsButton.cpp" />
-		<Unit filename="OptionsButton.h" />
+		<Unit filename="GameManager.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GameManager.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiAppState.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiAppState.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiRect.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiRect.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiText.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="GuiText.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="InGameAppState.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="InputManager.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="InputManager.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Key.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Key.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Listbox.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Listbox.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="OptionsButton.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="OptionsButton.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
 		<Unit filename="Projectile.h" />
-		<Unit filename="ServerListener.h" />
-		<Unit filename="ServerMain.cpp" />
-		<Unit filename="ServerMain.h" />
-		<Unit filename="Slider.cpp" />
-		<Unit filename="Slider.h" />
-		<Unit filename="StateManager.cpp" />
-		<Unit filename="StateManager.h" />
-		<Unit filename="Textbox.cpp" />
-		<Unit filename="Textbox.h" />
+		<Unit filename="ServerListener.h">
+			<Option target="ServerDebug" />
+			<Option target="ServerRelease" />
+		</Unit>
+		<Unit filename="ServerMain.cpp">
+			<Option target="ServerDebug" />
+			<Option target="ServerRelease" />
+		</Unit>
+		<Unit filename="ServerMain.h">
+			<Option target="ServerDebug" />
+			<Option target="ServerRelease" />
+		</Unit>
+		<Unit filename="Slider.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Slider.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="StateManager.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="StateManager.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Textbox.cpp">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
+		<Unit filename="Textbox.h">
+			<Option target="ClientDebug" />
+			<Option target="ClientRelease" />
+		</Unit>
 		<Unit filename="Util.cpp" />
 		<Unit filename="Util.h" />
 		<Unit filename="Weapon.h" />

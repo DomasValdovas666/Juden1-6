@@ -1,6 +1,6 @@
 #include"GuiAppState.h"
-#include<iostream>
 #include<algorithm>
+#include<ostream>
 
 namespace game {
     namespace core {
@@ -23,10 +23,20 @@ namespace game {
 
         void GuiAppState::onAttachment() {
             AbstractAppState::onAttachment();
+            addKeyboardKeys();
         }
 
         void GuiAppState::onDettachment() {
             AbstractAppState::onDettachment();
+        }
+
+        void GuiAppState::addKeyboardKeys(){
+            for(int i=0;i<sizeof(keyboardTriggers)/8;i++)
+                for(int i2=keyboardTriggers[i][0];i2<=keyboardTriggers[i][1];i2++) {
+                    std::stringstream ss;
+                    ss>>i2;
+                    keys.push_back(new Key(ss.str(),i2,1,1));
+                }
         }
 
         void GuiAppState::addButton(gui::Button *b) {
@@ -170,6 +180,14 @@ namespace game {
                 t->remove();
                 textboxes.pop_back();
             }
+        }
+
+        void GuiAppState::checkKeyboardKeys(gui::Textbox *t,string bind) {
+            int sum=0;
+            for(int i=0;i<sizeof(keyboardTriggers)/8;i++)
+                sum+=(keyboardTriggers[i][1]-keyboardTriggers[i][0]);
+            for(int i=keys.size()-1;i=keys.size()-sum;i--)
+                if(keys[i]->getBind()==bind) {}
         }
 
         void GuiAppState::onAction(string bind, bool isPressed) {

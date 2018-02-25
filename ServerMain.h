@@ -2,7 +2,7 @@
 #ifndef SERVERMAIN_H
 #define SERVERMAIN_H
 
-namespace main{
+namespace game{
     namespace net{
         class Server {
         public:
