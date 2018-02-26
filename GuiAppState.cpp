@@ -1,6 +1,7 @@
 #include"GuiAppState.h"
 #include<algorithm>
 #include<ostream>
+#include<string>
 
 namespace game {
     namespace core {
@@ -182,17 +183,22 @@ namespace game {
             }
         }
 
-        void GuiAppState::checkKeyboardKeys(gui::Textbox *t,string bind) {
+        void GuiAppState::checkKeyboardKeys(gui::Textbox *t,std::string bind) {
             int sum=0;
             for(int i=0;i<sizeof(keyboardTriggers)/8;i++)
                 sum+=(keyboardTriggers[i][1]-keyboardTriggers[i][0]);
-            for(int i=keys.size()-1;i=keys.size()-sum;i--)
-                if(keys[i]->getBind()==bind) {}
+            for(int i=keys.size()-1;i>keys.size()-sum;i--)
+                if(keys[i]->getBind()==bind)
+                    t->type(*(bind.c_str()));
         }
 
         void GuiAppState::onAction(string bind, bool isPressed) {
             int posX=gameManager->getInputManager()->getMouse()->getMouseState().X.abs;
             int posY=gameManager->getInputManager()->getMouse()->getMouseState().Y.abs;
+            gui::Textbox *t=nullptr;
+            for(int i=0;i<textboxes.size()&&!t;i++)
+                if(textboxes[i]->isEnabled())
+                    t=textboxes[i];
             if(bind=="leftClick"&&isPressed){
                 for(int i=0;i<buttons.size();i++){
                     Ogre::Vector2 pos=buttons[i]->getPos();
@@ -200,6 +206,9 @@ namespace game {
                     if(posX>pos.x&&posX<pos.x+size.x&&posY>pos.y&&posY<pos.y+size.y)
                         buttons[i]->onClick();
                 }
+            }
+            else if(t){
+                checkKeyboardKeys(t,bind);
             }
         }
 

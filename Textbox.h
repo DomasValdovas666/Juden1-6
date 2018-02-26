@@ -34,12 +34,13 @@ namespace game {
             };
             const int cursorWidth=5;
             Vector2 pos, size;
-            string entry = "";
-            bool enabled, canShowCursor = false, capitalLeters = false;
+            std::string entry = "";
+            bool enabled=false, canShowCursor = false, capitalLeters = false;
             TextboxButton *textboxButton;
             GuiRect *cursorRect;
             float fontWidth=20;
             s64 lastBlinkTime, cursorPosOffset = 0;
+            gui::GuiText *text;
             bool canChangeCursor();
         public:
             TextboxButton* getTextboxButton();

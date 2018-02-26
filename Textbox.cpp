@@ -1,6 +1,8 @@
 #include"Textbox.h"
 #include"DefConfigs.h"
 #include"Util.h"
+#include<sstream>
+#include<ostream>
 
 using namespace Ogre;
 using namespace game::util;
@@ -24,6 +26,7 @@ namespace game {
             textboxButton = new TextboxButton(this, smgr,pos, size, "TextboxButton", false);
             cursorRect=new GuiRect(smgr,pos,Vector2(cursorWidth,size.y),ColourValue(.4,.4,.4));
             cursorRect->toggleDisplay(false);
+            text=new gui::GuiText(pos);
             //font = gameManager->getDevice()->getGUIEnvironment()->getFont(PATH + "Fonts/bigfont.png");
         }
 
@@ -40,19 +43,14 @@ namespace game {
         }
 
         void Textbox::type(wchar_t ch) {
-            /*
             if (!capitalLeters)
                 ch = tolower(ch);
             else
                 ch = toupper(ch);
-            std::vector<wchar_t> v;
-            for (int i = 0; i < entry.size(); i++)
-                v.push_back(entry[i]);
-            v.insert(v.end() - cursorPosOffset, ch);
-            entry += 0;
-            for (int i = 0; i < v.size(); i++)
-                entry[i] = v[i];
-             */
+            std::stringstream ss;
+            ss<<ch;
+            entry.insert(cursorPosOffset,ss.str());
+            text->setEntry(entry);
         }
 
         void Textbox::moveCursor(bool left) {
@@ -99,6 +97,7 @@ namespace game {
 
         void Textbox::remove(){
             cursorRect->remove();
+            text->remove();
             delete this;
         }
 
